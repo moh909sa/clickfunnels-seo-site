@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://clickfunnels-seo-site.vercel.app/sitemap.xml
