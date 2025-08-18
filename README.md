@@ -1,258 +1,244 @@
-# ClickFunnels SEO Site
+# ClickFunnels SEO Site - Astro Edition
 
-A comprehensive programmatic SEO website for ClickFunnels affiliate marketing, built with Next.js 14 and TailwindCSS.
+A programmatic SEO site built with Astro to promote ClickFunnels through affiliate marketing. This site provides comprehensive information about ClickFunnels pricing, comparisons, and money-making strategies.
 
 ## 🚀 Features
 
-- **3 Landing Pages**: Pricing, vs Kartra comparison, and alternatives
-- **Modern UI/UX**: Responsive design with gradient backgrounds and smooth animations
-- **SEO Optimized**: Meta tags, Open Graph, Twitter Cards, JSON-LD structured data
-- **Performance Focused**: Optimized for Core Web Vitals and Lighthouse scores
-- **Affiliate Integration**: Direct links to ClickFunnels with affiliate tracking
-
-## 🛠️ Tech Stack
-
-- **Framework**: Next.js 14 (App Router)
-- **Styling**: TailwindCSS with custom design system
-- **Language**: TypeScript
-- **Components**: React with custom component library
-- **Icons**: Lucide React
-- **Analytics**: Vercel Analytics
-- **Deployment**: Vercel (recommended)
+- **3 High-Converting Pages**: Homepage, comparison page, and how-to guide
+- **SEO Optimized**: Meta tags, structured data, sitemap, and robots.txt
+- **Affiliate Integration**: ClickFunnels affiliate links throughout
+- **Responsive Design**: Mobile-first approach with modern UI
+- **Fast Performance**: Built with Astro for optimal speed
+- **Content-Rich**: 2,000+ words per page with actionable insights
 
 ## 📁 Project Structure
 
 ```
-clickfunnels-seo-site/
-├── app/                          # Next.js app directory
-│   ├── clickfunnels-pricing/    # Pricing page
-│   ├── clickfunnels-vs-kartra/  # Comparison page
-│   ├── clickfunnels-alternatives/ # Alternatives page
-│   ├── globals.css              # Global styles
-│   ├── layout.tsx               # Root layout
-│   ├── page.tsx                 # Homepage
-│   └── sitemap.ts               # Dynamic sitemap
-├── components/                   # Reusable components
-│   ├── Hero.tsx                 # Hero section component
-│   ├── PricingTable.tsx         # Pricing table with toggle
-│   ├── FAQ.tsx                  # FAQ accordion with JSON-LD
-│   └── Callout.tsx              # CTA component
-├── data/                        # Content data
-│   └── pages.json               # Page blueprint data
-├── public/                      # Static assets
-│   └── robots.txt               # Robots file
-├── tailwind.config.js           # TailwindCSS configuration
-├── next.config.js               # Next.js configuration
-├── package.json                 # Dependencies
-└── README.md                    # This file
+src/
+├── components/
+│   └── CTA.astro          # Reusable call-to-action button
+├── layouts/
+│   └── BaseLayout.astro   # Base layout with SEO and navigation
+└── pages/
+    ├── index.mdx          # Homepage with overview
+    ├── clickfunnels-vs-kartra.mdx    # Comparison page
+    └── how-to-make-money-with-clickfunnels.mdx  # How-to guide
+
+public/
+├── robots.txt             # Search engine instructions
+└── sitemap.xml           # XML sitemap for SEO
 ```
 
-## 🎨 Design System
+## 🛠️ Tech Stack
 
-### Colors
-- **Primary**: #6D28D9 (Purple)
-- **Secondary**: #22D3EE (Cyan)
-- **Accent**: #F59E0B (Amber)
-
-### Typography
-- **Heading Font**: Inter (Bold)
-- **Body Font**: Inter (Regular)
-- **Fluid Typography**: Responsive font sizes using CSS clamp
-
-### Components
-- **Cards**: Rounded corners (14px), subtle shadows
-- **Buttons**: Gradient backgrounds, hover animations
-- **Spacing**: 8pt grid system
-- **Animations**: Fade-in, slide-up, gentle bounce
-
-## 📱 Pages
-
-### 1. Homepage (`/`)
-- Hero section with main CTA
-- Features overview
-- Navigation to all pages
-- Footer with quick links
-
-### 2. Pricing Page (`/clickfunnels-pricing`)
-- Detailed pricing plans
-- Monthly/annual toggle
-- Feature comparison table
-- FAQ section
-- Multiple CTAs
-
-### 3. vs Kartra Page (`/clickfunnels-vs-kartra`)
-- Head-to-head comparison
-- Feature-by-feature analysis
-- Pros and cons
-- Decision guide
-- FAQ section
-
-### 4. Alternatives Page (`/clickfunnels-alternatives`)
-- 15+ alternatives overview
-- Pricing comparison
-- Feature matrix
-- Selection guide
-- FAQ section
+- **Framework**: Astro 4.0
+- **Styling**: TailwindCSS (utility classes)
+- **Content**: MDX with YAML frontmatter
+- **SEO**: Schema.org structured data, Open Graph, Twitter Cards
+- **Deployment**: Vercel (recommended)
 
 ## 🚀 Getting Started
 
 ### Prerequisites
+
 - Node.js 18+ 
 - npm or yarn
 
 ### Installation
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/clickfunnels-seo-site.git
-   cd clickfunnels-seo-site
-   ```
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/clickfunnels-seo-site.git
+cd clickfunnels-seo-site
+```
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
+2. Install dependencies:
+```bash
+npm install
+```
 
-3. **Run development server**
-   ```bash
-   npm run dev
-   # or
-   yarn dev
-   ```
+3. Start development server:
+```bash
+npm run dev
+```
 
-4. **Open your browser**
-   Navigate to [http://localhost:3000](http://localhost:3000)
+4. Open [http://localhost:4321](http://localhost:4321) in your browser
 
 ### Build for Production
 
 ```bash
 npm run build
-npm start
 ```
 
-## ⚙️ Configuration
+### Preview Production Build
+
+```bash
+npm run preview
+```
+
+## 📊 Content Overview
+
+### Homepage (`/`)
+- **Word Count**: 2,500+ words
+- **Focus**: ClickFunnels overview, pricing, alternatives
+- **SEO Keywords**: clickfunnels pricing, alternatives, reviews
+- **CTA Strategy**: Multiple CTAs throughout the page
+
+### Comparison Page (`/clickfunnels-vs-kartra`)
+- **Word Count**: 2,000+ words
+- **Focus**: Detailed ClickFunnels vs Kartra comparison
+- **SEO Keywords**: clickfunnels vs kartra, comparison, which is better
+- **CTA Strategy**: Strategic placement after key insights
+
+### How-To Guide (`/how-to-make-money-with-clickfunnels`)
+- **Word Count**: 2,500+ words
+- **Focus**: Money-making strategies with ClickFunnels
+- **SEO Keywords**: make money with clickfunnels, online income
+- **CTA Strategy**: Action-oriented CTAs for each strategy
+
+## 🔧 Configuration
 
 ### Environment Variables
 
-Create a `.env.local` file:
+Create a `.env` file in the root directory:
 
 ```env
-NEXT_PUBLIC_AFFILIATE_URL=https://www.clickfunnels.com/signup-flow?aff=YOUR_AFFILIATE_ID
+PUBLIC_AFFILIATE_URL=https://www.clickfunnels.com/signup-flow?aff=YOUR_AFFILIATE_ID
 ```
 
 ### Customization
 
-- **Brand Colors**: Update `tailwind.config.js` colors
-- **Content**: Modify `data/pages.json` for page content
-- **SEO**: Update metadata in each page component
-- **Styling**: Customize `app/globals.css` for global styles
+#### Affiliate Links
+Update affiliate links in:
+- `src/components/CTA.astro`
+- `src/layouts/BaseLayout.astro`
+- Individual page frontmatter
 
-## 🔍 SEO Features
+#### Branding
+Modify colors and styling in:
+- `src/layouts/BaseLayout.astro`
+- `src/components/CTA.astro`
 
-- **Meta Tags**: Title, description, keywords for each page
-- **Open Graph**: Social media sharing optimization
-- **Twitter Cards**: Twitter-specific meta tags
-- **JSON-LD**: Structured data for FAQs and pricing
-- **Sitemap**: Dynamic XML sitemap generation
-- **Robots.txt**: Search engine crawling instructions
-- **Canonical URLs**: Prevent duplicate content issues
+#### Content
+Update content in the MDX files:
+- `src/pages/index.mdx`
+- `src/pages/clickfunnels-vs-kartra.mdx`
+- `src/pages/how-to-make-money-with-clickfunnels.mdx`
 
-## 📊 Performance
+## 📈 SEO Features
 
-### Lighthouse Targets
-- **Performance**: ≥ 90
-- **SEO**: ≥ 95
-- **Accessibility**: ≥ 95
-- **Best Practices**: ≥ 90
+### Meta Tags
+- Title tags (50-60 characters)
+- Meta descriptions (140-160 characters)
+- Open Graph tags
+- Twitter Card tags
+- Keywords meta tags
 
-### Core Web Vitals
-- **LCP**: < 2.5s
-- **FID**: < 100ms
-- **CLS**: < 0.1
+### Structured Data
+- BreadcrumbList schema
+- WebPage schema
+- FAQ schema (where applicable)
 
-## 📈 Analytics
+### Technical SEO
+- XML sitemap
+- Robots.txt
+- Canonical URLs
+- Internal linking structure
 
-The site includes Vercel Analytics for:
-- Page views and user behavior
-- Performance monitoring
-- Conversion tracking
-- A/B testing insights
+## 🎨 Design System
+
+### Color Palette
+- **Primary**: Purple (#6D28D9)
+- **Secondary**: Blue (#22D3EE)
+- **Accent**: Orange (#F59E0B)
+- **Neutral**: Gray scale
+
+### Typography
+- **Headings**: Inter font family
+- **Body**: Inter font family
+- **Hierarchy**: H1, H2, H3 structure
+
+### Components
+- **CTA Button**: Primary and secondary variants
+- **Layout**: Responsive container with max-width
+- **Navigation**: Clean header with navigation links
+
+## 📱 Responsive Design
+
+- **Mobile-First**: Designed for mobile devices first
+- **Breakpoints**: TailwindCSS responsive utilities
+- **Navigation**: Collapsible mobile navigation
+- **Images**: Responsive image handling
 
 ## 🚀 Deployment
 
 ### Vercel (Recommended)
 
-1. **Connect your GitHub repository**
-2. **Import project to Vercel**
-3. **Set environment variables**
-4. **Deploy automatically**
+1. Connect your GitHub repository to Vercel
+2. Set environment variables in Vercel dashboard
+3. Deploy automatically on push to main branch
 
-### Other Platforms
+### Manual Deployment
 
-- **Netlify**: Compatible with Next.js
-- **AWS Amplify**: Full-stack deployment
-- **Self-hosted**: Docker or traditional hosting
+1. Build the project: `npm run build`
+2. Upload `dist/` folder to your hosting provider
+3. Configure your domain and SSL
 
-## 📝 Content Strategy
+## 📊 Analytics & Tracking
 
-### Target Keywords
-- Primary: "clickfunnels pricing", "clickfunnels alternatives"
-- Secondary: "clickfunnels vs kartra", "sales funnel builder"
-- Long-tail: "clickfunnels pricing 2025", "best clickfunnels alternative"
+### Google Analytics
+Add your GA4 tracking ID to the BaseLayout component.
 
-### Content Types
-- **Comparison Pages**: Detailed feature analysis
-- **Pricing Pages**: Transparent cost breakdown
-- **Alternative Pages**: Comprehensive platform reviews
-- **FAQ Sections**: User question optimization
+### Conversion Tracking
+Track affiliate link clicks and form submissions.
 
-## 🛠️ Development
+## 🔍 Performance Optimization
 
-### Scripts
+- **Astro**: Zero JavaScript by default
+- **Image Optimization**: Optimized image delivery
+- **CSS**: Purged unused CSS
+- **Lazy Loading**: Images and components load on demand
 
-```json
-{
-  "dev": "next dev",           # Development server
-  "build": "next build",       # Production build
-  "start": "next start",       # Production server
-  "lint": "next lint",         # ESLint checking
-  "generate-pages": "tsx scripts/generate-pages.ts"  # Page generation
-}
-```
+## 📚 Content Strategy
 
-### Code Style
+### Target Audience
+- Entrepreneurs looking for funnel building tools
+- Marketers comparing ClickFunnels alternatives
+- Beginners wanting to make money online
 
-- **TypeScript**: Strict mode enabled
-- **ESLint**: Next.js recommended rules
-- **Prettier**: Consistent formatting
-- **Components**: Functional components with hooks
+### Content Pillars
+1. **Education**: How ClickFunnels works
+2. **Comparison**: vs competitors
+3. **Implementation**: How to use for income
+
+### Internal Linking
+- Cross-linking between all pages
+- Related articles sections
+- Breadcrumb navigation
 
 ## 🤝 Contributing
 
 1. Fork the repository
 2. Create a feature branch
 3. Make your changes
-4. Add tests if applicable
+4. Test thoroughly
 5. Submit a pull request
 
 ## 📄 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
+## ⚠️ Disclaimer
+
+This site contains affiliate links to ClickFunnels. We may earn a commission if you sign up through our links at no additional cost to you.
+
 ## 🆘 Support
 
-- **Issues**: GitHub Issues
-- **Documentation**: This README
-- **Community**: GitHub Discussions
-
-## 🔗 Links
-
-- **Live Site**: [https://clickfunnels-seo-site.vercel.app](https://clickfunnels-seo-site.vercel.app)
-- **ClickFunnels**: [https://www.clickfunnels.com](https://www.clickfunnels.com)
-- **Repository**: [https://github.com/yourusername/clickfunnels-seo-site](https://github.com/yourusername/clickfunnels-seo-site)
+For support or questions:
+- Create an issue in this repository
+- Contact the development team
+- Check the ClickFunnels documentation
 
 ---
 
-**Note**: This site contains affiliate links to ClickFunnels. We may earn a commission if you sign up through our links.
+**Built with ❤️ using Astro for optimal performance and SEO**

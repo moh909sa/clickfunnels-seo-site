@@ -1,0 +1,119 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  slug: string;
+  date?: string;
+  tags?: string[];
+  affiliate_links?: Record<string, string>;
+  og_image?: string;
+  related?: string[];
+}
+
+const { 
+  title, 
+  description, 
+  slug, 
+  date = new Date().toISOString().split('T')[0],
+  tags = ['seo', 'clickfunnels', 'affiliate'],
+  affiliate_links = { clickfunnels: "https://www.clickfunnels.com/signup-flow?aff=36738480f0374bbe21a0d263c8b707ef738b7c7b7eb67bda8f16f741f9edca5a" },
+  og_image = "/og-default.png",
+  related = []
+} = Astro.props;
+
+// Ensure description is 140-160 characters
+const metaDescription = description.length > 160 
+  ? description.substring(0, 157) + '...'
+  : description.length < 140
+  ? description + ' '.repeat(140 - description.length)
+  : description;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={metaDescription} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={metaDescription} />
+    <meta property="og:image" content={og_image} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={`https://clickfunnels-seo-site.vercel.app/${slug}`} />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={metaDescription} />
+    <meta name="twitter:image" content={og_image} />
+    
+    <!-- Tags -->
+    <meta name="keywords" content={tags.join(', ')} />
+    
+    <!-- Schema.org -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": title,
+      "description": metaDescription,
+      "url": `https://clickfunnels-seo-site.vercel.app/${slug}`,
+      "datePublished": date,
+      "dateModified": date,
+      "keywords": tags.join(', '),
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://clickfunnels-seo-site.vercel.app/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": title,
+            "item": `https://clickfunnels-seo-site.vercel.app/${slug}`
+          }
+        ]
+      }
+    })} />
+    
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body class="bg-gray-50 text-gray-900">
+    <header class="bg-white shadow-sm border-b border-gray-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center py-6">
+          <div class="flex items-center">
+            <a href="/" class="text-2xl font-bold text-purple-600">ClickFunnels Guide</a>
+          </div>
+          <nav class="hidden md:flex space-x-8">
+            <a href="/" class="text-gray-600 hover:text-purple-600 transition-colors">Home</a>
+            <a href="/clickfunnels-vs-kartra" class="text-gray-600 hover:text-purple-600 transition-colors">vs Kartra</a>
+            <a href="/how-to-make-money-with-clickfunnels" class="text-gray-600 hover:text-purple-600 transition-colors">How To</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <slot />
+    </main>
+    
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="text-gray-400">&copy; 2025 ClickFunnels Guide. All rights reserved. This site contains affiliate links.</p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+</style>
