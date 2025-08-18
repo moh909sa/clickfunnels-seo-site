@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS Variables */
+:root {
+  --color-primary: 220 13% 91%;
+  --color-primary-foreground: 220 9% 46%;
+  --radius: 14px;
+}
+
+/* Custom Styles */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles */
+*:focus {
+  outline: 2px solid #6D28D9;
+  outline-offset: 2px;
+}
