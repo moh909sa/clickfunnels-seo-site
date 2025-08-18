@@ -17,36 +17,33 @@ interface FAQProps {
 export default function FAQ({ items, title = "Frequently Asked Questions", subtitle }: FAQProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
-  const toggleFAQ = (index: number) => {
+  const toggleItem = (index: number) => {
     setOpenIndex(openIndex === index ? null : index)
   }
 
-  // Generate JSON-LD schema
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": items.map(item => ({
-      "@type": "Question",
-      "name": item.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": item.answer
-      }
-    }))
+  // Generate JSON-LD schema for FAQ
+  const generateFAQSchema = () => {
+    const schema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": items.map(item => ({
+        "@type": "Question",
+        "name": item.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": item.answer
+        }
+      }))
+    }
+    return schema
   }
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-16 px-4 bg-gray-50">
       <div className="container-custom">
-        <div className="text-center mb-16">
-          <h2 className="text-fluid-3xl font-bold text-gray-900 mb-4">
-            {title}
-          </h2>
-          {subtitle && (
-            <p className="text-fluid-lg text-gray-600 max-w-2xl mx-auto">
-              {subtitle}
-            </p>
-          )}
+        <div className="text-center mb-12">
+          <h2 className="mb-4">{title}</h2>
+          {subtitle && <p className="text-gray-600 max-w-2xl mx-auto">{subtitle}</p>}
         </div>
 
         <div className="max-w-3xl mx-auto">
@@ -54,32 +51,29 @@ export default function FAQ({ items, title = "Frequently Asked Questions", subti
             {items.map((item, index) => (
               <div key={index} className="card">
                 <button
-                  onClick={() => toggleFAQ(index)}
-                  className="w-full text-left flex items-center justify-between py-4 focus:outline-none focus:ring-2 focus:ring-brand-1 focus:ring-offset-2 rounded-lg"
+                  onClick={() => toggleItem(index)}
+                  className="w-full flex items-center justify-between text-left p-0 bg-transparent border-none cursor-pointer"
                   aria-expanded={openIndex === index}
-                  aria-controls={`faq-answer-${index}`}
+                  aria-controls={`faq-${index}`}
                 >
                   <h3 className="text-lg font-semibold text-gray-900 pr-4">
                     {item.question}
                   </h3>
                   {openIndex === index ? (
-                    <ChevronUp className="w-5 h-5 text-brand-1 flex-shrink-0" />
+                    <ChevronUp className="w-5 h-5 text-gray-500 flex-shrink-0" />
                   ) : (
-                    <ChevronDown className="w-5 h-5 text-gray-400 flex-shrink-0" />
+                    <ChevronDown className="w-5 h-5 text-gray-500 flex-shrink-0" />
                   )}
                 </button>
                 
                 <div
-                  id={`faq-answer-${index}`}
-                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                    openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                  id={`faq-${index}`}
+                  className={`overflow-hidden transition-all duration-300 ${
+                    openIndex === index ? 'max-h-96 opacity-100 mt-4' : 'max-h-0 opacity-0'
                   }`}
-                  aria-hidden={openIndex !== index}
                 >
-                  <div className="pb-4">
-                    <p className="text-gray-600 leading-relaxed">
-                      {item.answer}
-                    </p>
+                  <div className="pt-4 border-t border-gray-200">
+                    <p className="text-gray-700 leading-relaxed">{item.answer}</p>
                   </div>
                 </div>
               </div>
@@ -87,27 +81,14 @@ export default function FAQ({ items, title = "Frequently Asked Questions", subti
           </div>
         </div>
 
-        {/* CTA Section */}
-        <div className="text-center mt-16">
-          <p className="text-gray-600 mb-6">
-            Still have questions? Get started with ClickFunnels today and see for yourself!
-          </p>
-          <a
-            href="https://www.clickfunnels.com/signup-flow?aff=36738480f0374bbe21a0d263c8b707ef738b7c7b7eb67bda8f16f741f9edca5a"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-primary inline-flex items-center gap-2"
-          >
-            Start Your Free Trial
-          </a>
-        </div>
+        {/* JSON-LD Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateFAQSchema())
+          }}
+        />
       </div>
-
-      {/* JSON-LD Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
     </section>
   )
 }

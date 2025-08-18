@@ -3,21 +3,26 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import { Analytics } from '@vercel/analytics/react'
 
-const inter = Inter({ 
-  subsets: ['latin'],
-  variable: '--font-inter',
-})
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: {
     default: 'ClickFunnels SEO Site - Pricing, Alternatives & Comparisons',
-    template: '%s | ClickFunnels Guide'
+    template: '%s | ClickFunnels SEO Site'
   },
-  description: 'Discover ClickFunnels pricing, alternatives, and comparisons. Get detailed insights on plans, features, and find the best sales funnel builder for your business.',
-  keywords: ['clickfunnels', 'sales funnel', 'landing page builder', 'clickfunnels pricing', 'clickfunnels alternatives', 'clickfunnels vs kartra'],
-  authors: [{ name: 'ClickFunnels Guide' }],
-  creator: 'ClickFunnels Guide',
-  publisher: 'ClickFunnels Guide',
+  description: 'Discover ClickFunnels pricing, alternatives, and comparisons. Find the best sales funnel builder for your business needs in 2025.',
+  keywords: [
+    'clickfunnels',
+    'clickfunnels pricing',
+    'clickfunnels alternatives',
+    'clickfunnels vs kartra',
+    'sales funnel builder',
+    'landing page builder',
+    'marketing automation'
+  ],
+  authors: [{ name: 'ClickFunnels SEO Site' }],
+  creator: 'ClickFunnels SEO Site',
+  publisher: 'ClickFunnels SEO Site',
   formatDetection: {
     email: false,
     address: false,
@@ -28,26 +33,26 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'ClickFunnels SEO Site - Pricing, Alternatives & Comparisons',
-    description: 'Discover ClickFunnels pricing, alternatives, and comparisons. Get detailed insights on plans, features, and find the best sales funnel builder for your business.',
+    type: 'website',
+    locale: 'en_US',
     url: 'https://clickfunnels-seo-site.vercel.app',
-    siteName: 'ClickFunnels Guide',
+    title: 'ClickFunnels SEO Site - Pricing, Alternatives & Comparisons',
+    description: 'Discover ClickFunnels pricing, alternatives, and comparisons. Find the best sales funnel builder for your business needs in 2025.',
+    siteName: 'ClickFunnels SEO Site',
     images: [
       {
-        url: '/api/og?title=ClickFunnels%20Guide',
+        url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'ClickFunnels Guide - Pricing, Alternatives & Comparisons',
+        alt: 'ClickFunnels SEO Site',
       },
     ],
-    locale: 'en_US',
-    type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'ClickFunnels SEO Site - Pricing, Alternatives & Comparisons',
-    description: 'Discover ClickFunnels pricing, alternatives, and comparisons. Get detailed insights on plans, features, and find the best sales funnel builder for your business.',
-    images: ['/api/og?title=ClickFunnels%20Guide'],
+    description: 'Discover ClickFunnels pricing, alternatives, and comparisons. Find the best sales funnel builder for your business needs in 2025.',
+    images: ['/og-image.jpg'],
   },
   robots: {
     index: true,
@@ -63,6 +68,12 @@ export const metadata: Metadata = {
   verification: {
     google: 'your-google-verification-code',
   },
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon-16x16.png',
+    apple: '/apple-touch-icon.png',
+  },
+  manifest: '/site.webmanifest',
 }
 
 export default function RootLayout({
@@ -71,16 +82,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={inter.variable}>
-      <head>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="manifest" href="/site.webmanifest" />
-        <meta name="theme-color" content="#6D28D9" />
-      </head>
-      <body className={`${inter.className} antialiased bg-gray-50`}>
+    <html lang="en">
+      <body className={inter.className}>
         {children}
         <Analytics />
       </body>

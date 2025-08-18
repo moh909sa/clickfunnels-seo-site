@@ -33,9 +33,9 @@ module.exports = {
         'fluid-lg': 'clamp(1.125rem, 1rem + 0.625vw, 1.25rem)',
         'fluid-xl': 'clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem)',
         'fluid-2xl': 'clamp(1.5rem, 1.3rem + 1vw, 2rem)',
-        'fluid-3xl': 'clamp(2rem, 1.8rem + 1.25vw, 3rem)',
-        'fluid-4xl': 'clamp(3rem, 2.6rem + 2vw, 4rem)',
-        'fluid-5xl': 'clamp(4rem, 3.4rem + 3vw, 6rem)',
+        'fluid-3xl': 'clamp(2rem, 1.7rem + 1.5vw, 2.5rem)',
+        'fluid-4xl': 'clamp(2.5rem, 2.1rem + 2vw, 3.5rem)',
+        'fluid-5xl': 'clamp(3.5rem, 2.9rem + 3vw, 4.5rem)',
       },
       maxWidth: {
         'container': '1200px',
@@ -53,17 +53,17 @@ module.exports = {
       keyframes: {
         fadeIn: {
           '0%': { opacity: '0' },
-          '100%': { opacity: '1' },
+          '100%': { opacity: '1' }
         },
         slideUp: {
           '0%': { transform: 'translateY(20px)', opacity: '0' },
-          '100%': { transform: 'translateY(0)', opacity: '1' },
+          '100%': { transform: 'translateY(0)', opacity: '1' }
         },
         bounceGentle: {
           '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-10px)' },
-        },
-      },
+          '50%': { transform: 'translateY(-10px)' }
+        }
+      }
     },
   },
   plugins: [],

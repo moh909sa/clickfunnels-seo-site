@@ -2,221 +2,229 @@ import type { Metadata } from 'next'
 import Hero from '@/components/Hero'
 import FAQ from '@/components/FAQ'
 import Callout from '@/components/Callout'
-import { CheckCircle, XCircle, Star, Zap, Users, Shield, TrendingUp, Mail, CreditCard, Globe } from 'lucide-react'
+import { Check, X, Minus } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'ClickFunnels vs Kartra 2025: Which Sales Funnel Builder Wins?',
-  description: 'Compare ClickFunnels vs Kartra head-to-head. See pricing, features, ease of use, and which platform is better for your business needs.',
-  keywords: ['clickfunnels vs kartra', 'clickfunnels vs kartra comparison', 'clickfunnels vs kartra 2025', 'sales funnel builder comparison'],
+  description: 'Compare ClickFunnels vs Kartra in 2025. See pricing, features, pros & cons, and find which platform is better for your business needs.',
+  keywords: [
+    'clickfunnels vs kartra',
+    'clickfunnels vs kartra 2025',
+    'kartra vs clickfunnels',
+    'clickfunnels vs kartra comparison',
+    'which is better clickfunnels or kartra'
+  ],
   openGraph: {
     title: 'ClickFunnels vs Kartra 2025: Which Sales Funnel Builder Wins?',
-    description: 'Compare ClickFunnels vs Kartra head-to-head. See pricing, features, ease of use, and which platform is better for your business needs.',
+    description: 'Compare ClickFunnels vs Kartra in 2025. See pricing, features, pros & cons, and find which platform is better for your business needs.',
     url: 'https://clickfunnels-seo-site.vercel.app/clickfunnels-vs-kartra',
   },
 }
 
 const faqItems = [
   {
-    question: "Is ClickFunnels better than Kartra?",
-    answer: "It depends on your needs. ClickFunnels excels at funnel building and has a larger template library, while Kartra offers better email marketing automation and CRM features. ClickFunnels is better for pure funnel building, while Kartra is better for all-in-one marketing automation."
+    question: "Which platform is better for beginners?",
+    answer: "ClickFunnels is generally better for beginners due to its simpler interface and extensive template library. Kartra has more features but a steeper learning curve. If you're new to funnel building, ClickFunnels' drag-and-drop editor and proven templates make it easier to get started quickly."
   },
   {
-    question: "Which platform is easier to use?",
-    answer: "ClickFunnels has a steeper learning curve but offers more advanced funnel building capabilities. Kartra is generally easier to use for beginners, especially for email marketing and automation. Both platforms have drag-and-drop interfaces, but Kartra's is more intuitive."
+    question: "Does Kartra have better email marketing than ClickFunnels?",
+    answer: "Yes, Kartra has superior email marketing capabilities. It includes both broadcasts and sequences with advanced automation, behavioral triggers, and segmentation. ClickFunnels only offers basic broadcast emails and requires third-party integrations for advanced email marketing features."
   },
   {
-    question: "Does Kartra have better email marketing?",
-    answer: "Yes, Kartra has superior email marketing features including advanced automation workflows, behavioral targeting, and better segmentation. ClickFunnels has basic email marketing, but Kartra is specifically designed for comprehensive marketing automation."
+    question: "Which platform offers better templates?",
+    answer: "ClickFunnels has a larger and more diverse template library with proven conversion rates. Their templates are created by successful entrepreneurs and marketers. Kartra has fewer templates but they're well-designed and cover most common use cases. ClickFunnels wins for template variety and proven results."
   },
   {
-    question: "Can I migrate from ClickFunnels to Kartra?",
-    answer: "Yes, you can migrate, but it's not seamless. You'll need to rebuild your funnels in Kartra and export/import your contact lists. Kartra does offer migration assistance, but expect to spend time recreating your funnel structure."
+    question: "Can I migrate from one platform to the other?",
+    answer: "Migration between platforms is possible but not seamless. You'll need to rebuild your funnels and pages, though you can copy content and design elements. Email lists and customer data can usually be exported and imported. Consider using a migration service for complex setups."
   },
   {
-    question: "Which platform has better templates?",
-    answer: "ClickFunnels has a larger and more diverse template library with over 100+ funnel templates. Kartra has fewer templates but they're more modern and mobile-optimized. ClickFunnels templates are better for sales funnels, while Kartra excels at marketing pages."
+    question: "Which platform has better customer support?",
+    answer: "Both platforms offer good support, but ClickFunnels has more extensive resources including Funnel Flix, weekly hackathons, and a large community. Kartra provides 24/7 support with live chat and comprehensive documentation. ClickFunnels wins for educational resources, while Kartra wins for immediate support availability."
   },
   {
-    question: "Is ClickFunnels more expensive than Kartra?",
-    answer: "ClickFunnels is generally more expensive, starting at $97/month vs Kartra's $99/month. However, ClickFunnels offers more advanced funnel building features, while Kartra provides better value for marketing automation and CRM functionality."
+    question: "Are there any hidden costs with either platform?",
+    answer: "ClickFunnels pricing is transparent with no hidden fees. All features within your plan are included. Kartra also has transparent pricing, but you may need to pay extra for certain integrations or advanced features. Both platforms include most essential features in their base plans."
   }
 ]
 
 export default function ClickFunnelsVsKartraPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Header */}
-      <header className="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50">
-        <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-brand-1 to-brand-2 rounded-lg"></div>
-              <a href="/" className="text-xl font-bold text-gray-900">ClickFunnels Guide</a>
-            </div>
-            <nav className="hidden md:flex items-center space-x-8">
-              <a href="/" className="text-gray-600 hover:text-brand-1 transition-colors">Home</a>
-              <a href="/clickfunnels-pricing" className="text-gray-600 hover:text-brand-1 transition-colors">Pricing</a>
-              <a href="/clickfunnels-alternatives" className="text-gray-600 hover:text-brand-1 transition-colors">Alternatives</a>
-            </nav>
-          </div>
-        </div>
-      </header>
-
-      {/* Hero Section */}
+    <div className="min-h-screen">
       <Hero
         headline="ClickFunnels vs Kartra 2025: Which Sales Funnel Builder Wins?"
-        subtext="Compare ClickFunnels vs Kartra head-to-head. See pricing, features, ease of use, and which platform is better for your business needs and marketing goals."
+        subtext="Get a detailed comparison of ClickFunnels vs Kartra. Compare pricing, features, ease of use, and find which platform is right for your business goals."
         ctaText="Try ClickFunnels Free"
+        ctaHref="https://www.clickfunnels.com/signup-flow?aff=36738480f0374bbe21a0d263c8b707ef738b7c7b7eb67bda8f16f741f9edca5a"
+        secondaryCtaText="Learn More About Kartra"
+        secondaryCtaHref="https://home.kartra.com"
       />
 
       {/* Quick Comparison */}
-      <section className="py-20 bg-white">
-        <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-fluid-3xl font-bold text-gray-900 mb-4">
-              ClickFunnels vs Kartra: At a Glance
-            </h2>
-            <p className="text-fluid-lg text-gray-600 max-w-2xl mx-auto">
-              Here's a quick overview of how these two platforms stack up against each other.
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-8">
-            {/* ClickFunnels */}
+      <section className="py-16 px-4 bg-white">
+        <div className="container-custom">
+          <h2 className="text-center mb-12">Quick Comparison Overview</h2>
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="card text-center">
-              <div className="w-20 h-20 bg-gradient-to-r from-brand-1 to-brand-2 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <TrendingUp className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">ClickFunnels</h3>
-              <div className="text-3xl font-bold text-brand-1 mb-2">$97/month</div>
-              <p className="text-gray-600 mb-6">Starting price</p>
-              
-              <div className="space-y-3 text-left">
-                <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-500" />
-                  <span className="text-gray-700">Unlimited funnels & pages</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-500" />
-                  <span className="text-gray-700">100+ funnel templates</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-500" />
-                  <span className="text-gray-700">Advanced funnel analytics</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-500" />
-                  <span className="text-gray-700">A/B testing tools</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-500" />
-                  <span className="text-gray-700">Membership site builder</span>
-                </div>
-              </div>
+              <h3 className="text-2xl font-bold mb-4">ClickFunnels</h3>
+              <div className="text-4xl font-bold text-brand-1 mb-2">$81</div>
+              <div className="text-gray-600 mb-4">per month (annual)</div>
+              <ul className="text-left space-y-2">
+                <li className="flex items-center">
+                  <Check className="w-5 h-5 text-green-500 mr-2" />
+                  Unlimited funnels & pages
+                </li>
+                <li className="flex items-center">
+                  <Check className="w-5 h-5 text-green-500 mr-2" />
+                  Extensive template library
+                </li>
+                <li className="flex items-center">
+                  <Check className="w-5 h-5 text-green-500 mr-2" />
+                  Proven conversion strategies
+                </li>
+                <li className="flex items-center">
+                  <X className="w-5 h-5 text-red-500 mr-2" />
+                  Basic email marketing
+                </li>
+              </ul>
             </div>
-
-            {/* Kartra */}
             <div className="card text-center">
-              <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Zap className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Kartra</h3>
-              <div className="text-3xl font-bold text-blue-600 mb-2">$99/month</div>
-              <p className="text-gray-600 mb-6">Starting price</p>
-              
-              <div className="space-y-3 text-left">
-                <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-500" />
-                  <span className="text-gray-700">Advanced email automation</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-500" />
-                  <span className="text-gray-700">Built-in CRM system</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-500" />
-                  <span className="text-gray-700">Behavioral targeting</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-500" />
-                  <span className="text-gray-700">Video hosting & streaming</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-500" />
-                  <span className="text-gray-700">Affiliate management</span>
-                </div>
-              </div>
+              <h3 className="text-2xl font-bold mb-4">Kartra</h3>
+              <div className="text-4xl font-bold text-brand-2 mb-2">$119</div>
+              <div className="text-gray-600 mb-4">per month (annual)</div>
+              <ul className="text-left space-y-2">
+                <li className="flex items-center">
+                  <Check className="w-5 h-5 text-green-500 mr-2" />
+                  All-in-one platform
+                </li>
+                <li className="flex items-center">
+                  <Check className="w-5 h-5 text-green-500 mr-2" />
+                  Advanced email automation
+                </li>
+                <li className="flex items-center">
+                  <Check className="w-5 h-5 text-green-500 mr-2" />
+                  Built-in CRM & helpdesk
+                </li>
+                <li className="flex items-center">
+                  <X className="w-5 h-5 text-red-500 mr-2" />
+                  Steeper learning curve
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Detailed Comparison */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-fluid-3xl font-bold text-gray-900 mb-4">
-              Detailed Feature Comparison
-            </h2>
-            <p className="text-fluid-lg text-gray-600 max-w-2xl mx-auto">
-              See exactly how ClickFunnels and Kartra compare across all major features and capabilities.
-            </p>
-          </div>
-
+      {/* Detailed Feature Comparison */}
+      <section className="py-16 px-4 bg-gray-50">
+        <div className="container-custom">
+          <h2 className="text-center mb-12">Feature-by-Feature Comparison</h2>
           <div className="overflow-x-auto">
-            <table className="w-full bg-white rounded-2xl shadow-lg border border-gray-100">
+            <table className="w-full border-collapse border border-gray-200 rounded-lg overflow-hidden bg-white">
               <thead>
-                <tr className="border-b border-gray-200">
-                  <th className="text-left p-6 font-semibold text-gray-900">Feature</th>
-                  <th className="text-center p-6 font-semibold text-gray-900">ClickFunnels</th>
-                  <th className="text-center p-6 font-semibold text-gray-900">Kartra</th>
+                <tr className="bg-gray-50">
+                  <th className="border border-gray-200 p-4 text-left font-semibold">Feature</th>
+                  <th className="border border-gray-200 p-4 text-center font-semibold">ClickFunnels</th>
+                  <th className="border border-gray-200 p-4 text-center font-semibold">Kartra</th>
+                  <th className="border border-gray-200 p-4 text-center font-semibold">Winner</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-gray-200">
+              <tbody>
                 <tr>
-                  <td className="p-6 font-medium text-gray-900">Starting Price</td>
-                  <td className="p-6 text-center text-gray-900">$97/month</td>
-                  <td className="p-6 text-center text-gray-900">$99/month</td>
+                  <td className="border border-gray-200 p-4 font-medium">Starting Price</td>
+                  <td className="border border-gray-200 p-4 text-center">$81/month</td>
+                  <td className="border border-gray-200 p-4 text-center">$119/month</td>
+                  <td className="border border-gray-200 p-4 text-center text-green-600 font-semibold">ClickFunnels</td>
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="border border-gray-200 p-4 font-medium">Funnel Builder</td>
+                  <td className="border border-gray-200 p-4 text-center">
+                    <Check className="w-5 h-5 text-green-500 mx-auto" />
+                  </td>
+                  <td className="border border-gray-200 p-4 text-center">
+                    <Check className="w-5 h-5 text-green-500 mx-auto" />
+                  </td>
+                  <td className="border border-gray-200 p-4 text-center text-gray-600">Tie</td>
                 </tr>
                 <tr>
-                  <td className="p-6 font-medium text-gray-900">Funnel Builder</td>
-                  <td className="p-6 text-center text-green-600 font-semibold">⭐⭐⭐⭐⭐</td>
-                  <td className="p-6 text-center text-blue-600 font-semibold">⭐⭐⭐⭐</td>
+                  <td className="border border-gray-200 p-4 font-medium">Landing Pages</td>
+                  <td className="border border-gray-200 p-4 text-center">
+                    <Check className="w-5 h-5 text-green-500 mx-auto" />
+                  </td>
+                  <td className="border border-gray-200 p-4 text-center">
+                    <Check className="w-5 h-5 text-green-500 mx-auto" />
+                  </td>
+                  <td className="border border-gray-200 p-4 text-center text-gray-600">Tie</td>
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="border border-gray-200 p-4 font-medium">Email Marketing</td>
+                  <td className="border border-gray-200 p-4 text-center">
+                    <Minus className="w-5 h-5 text-gray-400 mx-auto" />
+                  </td>
+                  <td className="border border-gray-200 p-4 text-center">
+                    <Check className="w-5 h-5 text-green-500 mx-auto" />
+                  </td>
+                  <td className="border border-gray-200 p-4 text-center text-blue-600 font-semibold">Kartra</td>
                 </tr>
                 <tr>
-                  <td className="p-6 font-medium text-gray-900">Email Marketing</td>
-                  <td className="p-6 text-center text-gray-600">⭐⭐⭐</td>
-                  <td className="p-6 text-center text-green-600 font-semibold">⭐⭐⭐⭐⭐</td>
+                  <td className="border border-gray-200 p-4 font-medium">Membership Sites</td>
+                  <td className="border border-gray-200 p-4 text-center">
+                    <Check className="w-5 h-5 text-green-500 mx-auto" />
+                  </td>
+                  <td className="border border-gray-200 p-4 text-center">
+                    <Check className="w-5 h-5 text-green-500 mx-auto" />
+                  </td>
+                  <td className="border border-gray-200 p-4 text-center text-gray-600">Tie</td>
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="border border-gray-200 p-4 font-medium">CRM System</td>
+                  <td className="border border-gray-200 p-4 text-center">
+                    <X className="w-5 h-5 text-red-500 mx-auto" />
+                  </td>
+                  <td className="border border-gray-200 p-4 text-center">
+                    <Check className="w-5 h-5 text-green-500 mx-auto" />
+                  </td>
+                  <td className="border border-gray-200 p-4 text-center text-blue-600 font-semibold">Kartra</td>
                 </tr>
                 <tr>
-                  <td className="p-6 font-medium text-gray-900">CRM Features</td>
-                  <td className="p-6 text-center text-gray-600">⭐⭐⭐</td>
-                  <td className="p-6 text-center text-green-600 font-semibold">⭐⭐⭐⭐⭐</td>
+                  <td className="border border-gray-200 p-4 font-medium">Helpdesk</td>
+                  <td className="border border-gray-200 p-4 text-center">
+                    <X className="w-5 h-5 text-red-500 mx-auto" />
+                  </td>
+                  <td className="border border-gray-200 p-4 text-center">
+                    <Check className="w-5 h-5 text-green-500 mx-auto" />
+                  </td>
+                  <td className="border border-gray-200 p-4 text-center text-blue-600 font-semibold">Kartra</td>
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="border border-gray-200 p-4 font-medium">Template Library</td>
+                  <td className="border border-gray-200 p-4 text-center">
+                    <Check className="w-5 h-5 text-green-500 mx-auto" />
+                  </td>
+                  <td className="border border-gray-200 p-4 text-center">
+                    <Minus className="w-5 h-5 text-gray-400 mx-auto" />
+                  </td>
+                  <td className="border border-gray-200 p-4 text-center text-green-600 font-semibold">ClickFunnels</td>
                 </tr>
                 <tr>
-                  <td className="p-6 font-medium text-gray-900">Template Library</td>
-                  <td className="p-6 text-center text-green-600 font-semibold">⭐⭐⭐⭐⭐</td>
-                  <td className="p-6 text-center text-gray-600">⭐⭐⭐⭐</td>
+                  <td className="border border-gray-200 p-4 font-medium">Ease of Use</td>
+                  <td className="border border-gray-200 p-4 text-center">
+                    <Check className="w-5 h-5 text-green-500 mx-auto" />
+                  </td>
+                  <td className="border border-gray-200 p-4 text-center">
+                    <Minus className="w-5 h-5 text-gray-400 mx-auto" />
+                  </td>
+                  <td className="border border-gray-200 p-4 text-center text-green-600 font-semibold">ClickFunnels</td>
                 </tr>
-                <tr>
-                  <td className="p-6 font-medium text-gray-900">Ease of Use</td>
-                  <td className="p-6 text-center text-gray-600">⭐⭐⭐</td>
-                  <td className="p-6 text-center text-green-600 font-semibold">⭐⭐⭐⭐</td>
-                </tr>
-                <tr>
-                  <td className="p-6 font-medium text-gray-900">Analytics</td>
-                  <td className="p-6 text-center text-green-600 font-semibold">⭐⭐⭐⭐⭐</td>
-                  <td className="p-6 text-center text-gray-600">⭐⭐⭐⭐</td>
-                </tr>
-                <tr>
-                  <td className="p-6 font-medium text-gray-900">Mobile Optimization</td>
-                  <td className="p-6 text-center text-gray-600">⭐⭐⭐⭐</td>
-                  <td className="p-6 text-center text-green-600 font-semibold">⭐⭐⭐⭐⭐</td>
-                </tr>
-                <tr>
-                  <td className="p-6 font-medium text-gray-900">Customer Support</td>
-                  <td className="p-6 text-center text-green-600 font-semibold">⭐⭐⭐⭐⭐</td>
-                  <td className="p-6 text-center text-gray-600">⭐⭐⭐⭐</td>
+                <tr className="bg-gray-50">
+                  <td className="border border-gray-200 p-4 font-medium">Customer Support</td>
+                  <td className="border border-gray-200 p-4 text-center">
+                    <Minus className="w-5 h-5 text-gray-400 mx-auto" />
+                  </td>
+                  <td className="border border-gray-200 p-4 text-center">
+                    <Check className="w-5 h-5 text-green-500 mx-auto" />
+                  </td>
+                  <td className="border border-gray-200 p-4 text-center text-blue-600 font-semibold">Kartra</td>
                 </tr>
               </tbody>
             </table>
@@ -224,155 +232,137 @@ export default function ClickFunnelsVsKartraPage() {
         </div>
       </section>
 
-      {/* ClickFunnels Strengths */}
-      <section className="py-20 bg-white">
-        <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-fluid-3xl font-bold text-gray-900 mb-4">
-              ClickFunnels Strengths
-            </h2>
-            <p className="text-fluid-lg text-gray-600 max-w-2xl mx-auto">
-              What makes ClickFunnels the go-to choice for serious funnel builders.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="card text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-brand-1 to-brand-2 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <TrendingUp className="w-8 h-8 text-white" />
+      {/* Pros and Cons */}
+      <section className="py-16 px-4 bg-white">
+        <div className="container-custom">
+          <h2 className="text-center mb-12">Pros and Cons Analysis</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-2xl font-bold mb-6 text-center">ClickFunnels Pros & Cons</h3>
+              <div className="space-y-4">
+                <div>
+                  <h4 className="font-semibold text-green-600 mb-2">✅ Pros</h4>
+                  <ul className="space-y-2 text-gray-700">
+                    <li>• More affordable starting price</li>
+                    <li>• Extensive template library</li>
+                    <li>• Easier to use for beginners</li>
+                    <li>• Proven conversion strategies</li>
+                    <li>• Strong community and training</li>
+                    <li>• Unlimited funnels and pages</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-red-600 mb-2">❌ Cons</h4>
+                  <ul className="space-y-2 text-gray-700">
+                    <li>• Basic email marketing only</li>
+                    <li>• No built-in CRM</li>
+                    <li>• Limited integrations</li>
+                    <li>• Higher learning curve for advanced features</li>
+                  </ul>
+                </div>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Superior Funnel Building</h3>
-              <p className="text-gray-600">
-                ClickFunnels was built specifically for creating high-converting sales funnels with advanced features like A/B testing, conversion tracking, and optimization tools.
-              </p>
             </div>
-
-            <div className="card text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-brand-2 to-brand-3 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Star className="w-8 h-8 text-white" />
+            <div>
+              <h3 className="text-2xl font-bold mb-6 text-center">Kartra Pros & Cons</h3>
+              <div className="space-y-4">
+                <div>
+                  <h4 className="font-semibold text-green-600 mb-2">✅ Pros</h4>
+                  <ul className="space-y-2 text-gray-700">
+                    <li>• All-in-one platform</li>
+                    <li>• Advanced email automation</li>
+                    <li>• Built-in CRM system</li>
+                    <li>• Helpdesk functionality</li>
+                    <li>• Better customer support</li>
+                    <li>• More integrations</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-red-600 mb-2">❌ Cons</h4>
+                  <ul className="space-y-2 text-gray-700">
+                    <li>• Higher starting price</li>
+                    <li>• Steeper learning curve</li>
+                    <li>• Fewer templates</li>
+                    <li>• Can be overwhelming for beginners</li>
+                    <li>• More expensive for small businesses</li>
+                  </ul>
+                </div>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Extensive Template Library</h3>
-              <p className="text-gray-600">
-                Access to 100+ professionally designed funnel templates that have been proven to convert across various industries and use cases.
-              </p>
-            </div>
-
-            <div className="card text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-brand-3 to-brand-1 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Shield className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Proven Track Record</h3>
-              <p className="text-gray-600">
-                Used by over 150,000 entrepreneurs and businesses, with a proven track record of helping companies increase conversions and sales.
-              </p>
-            </div>
-
-            <div className="card text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <CheckCircle className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Advanced Analytics</h3>
-              <p className="text-gray-600">
-                Comprehensive funnel analytics and conversion tracking to help you optimize your sales funnels for maximum performance.
-              </p>
-            </div>
-
-            <div className="card text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Users className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Team Collaboration</h3>
-              <p className="text-gray-600">
-                Built-in team collaboration features that make it easy to work with designers, copywriters, and marketing teams.
-              </p>
-            </div>
-
-            <div className="card text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Mail className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Email Integration</h3>
-              <p className="text-gray-600">
-                Seamless integration with popular email marketing platforms and built-in email automation capabilities.
-              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Kartra Strengths */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-fluid-3xl font-bold text-gray-900 mb-4">
-              Kartra Strengths
-            </h2>
-            <p className="text-fluid-lg text-gray-600 max-w-2xl mx-auto">
-              What makes Kartra a powerful all-in-one marketing platform.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="card text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Mail className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Advanced Email Marketing</h3>
-              <p className="text-gray-600">
-                Superior email automation with behavioral targeting, advanced segmentation, and sophisticated workflow capabilities.
-              </p>
+      {/* Who Should Choose What */}
+      <section className="py-16 px-4 bg-gray-50">
+        <div className="container-custom">
+          <h2 className="text-center mb-12">Who Should Choose What?</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="card">
+              <h3 className="text-2xl font-bold mb-4 text-center">Choose ClickFunnels If:</h3>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>You're a beginner to funnel building</span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>You want proven, high-converting templates</span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>You have a limited budget</span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>You need quick setup and deployment</span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>You want extensive training resources</span>
+                </li>
+              </ul>
             </div>
-
-            <div className="card text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Users className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Built-in CRM</h3>
-              <p className="text-gray-600">
-                Comprehensive CRM system with lead scoring, pipeline management, and advanced customer relationship tools.
-              </p>
-            </div>
-
-            <div className="card text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Zap className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Marketing Automation</h3>
-              <p className="text-gray-600">
-                Powerful marketing automation with behavioral triggers, conditional logic, and multi-channel campaign management.
-              </p>
-            </div>
-
-            <div className="card text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-yellow-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Globe className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Video Hosting</h3>
-              <p className="text-gray-600">
-                Built-in video hosting and streaming capabilities with advanced video marketing features and analytics.
-              </p>
-            </div>
-
-            <div className="card text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <CreditCard className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Affiliate Management</h3>
-              <p className="text-gray-600">
-                Comprehensive affiliate management system with tracking, payouts, and performance analytics.
-              </p>
-            </div>
-
-            <div className="card text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <CheckCircle className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Ease of Use</h3>
-              <p className="text-gray-600">
-                More intuitive interface and easier learning curve, especially for beginners in digital marketing.
-              </p>
+            <div className="card">
+              <h3 className="text-2xl font-bold mb-4 text-center">Choose Kartra If:</h3>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>You need an all-in-one solution</span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Advanced email marketing is crucial</span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>You want built-in CRM and helpdesk</span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>You're comfortable with complex tools</span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>You have a larger budget for tools</span>
+                </li>
+              </ul>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Final Verdict */}
+      <section className="py-16 px-4 bg-white">
+        <div className="container-custom text-center">
+          <h2 className="mb-6">Final Verdict</h2>
+          <p className="text-lg text-gray-700 mb-8 max-w-3xl mx-auto">
+            <strong>ClickFunnels wins for beginners and budget-conscious users</strong> who want to quickly build proven sales funnels. 
+            <strong>Kartra wins for established businesses</strong> who need advanced features and an all-in-one platform.
+          </p>
+          <p className="text-gray-600 mb-8">
+            If you're just starting out or want to focus on funnel building with proven templates, go with ClickFunnels. 
+            If you need advanced marketing automation, CRM, and helpdesk features, Kartra is the better choice.
+          </p>
         </div>
       </section>
 
@@ -380,24 +370,16 @@ export default function ClickFunnelsVsKartraPage() {
       <FAQ 
         items={faqItems}
         title="ClickFunnels vs Kartra FAQ"
-        subtitle="Get answers to the most common questions about choosing between ClickFunnels and Kartra."
+        subtitle="Common questions about choosing between these platforms"
       />
 
       {/* Final CTA */}
       <Callout
-        title="Ready to Choose Your Platform?"
-        subtitle="Both ClickFunnels and Kartra offer free trials. Test them out and see which one fits your business needs better!"
-        ctaText="Try ClickFunnels Free"
+        title="Ready to Build Your First Funnel?"
+        subtitle="Start with ClickFunnels and get access to proven templates, extensive training, and a 14-day free trial."
+        ctaText="Start ClickFunnels Free Trial"
+        ctaHref="https://www.clickfunnels.com/signup-flow?aff=36738480f0374bbe21a0d263c8b707ef738b7c7b7eb67bda8f16f741f9edca5a"
       />
-
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
-        <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-gray-400 text-sm">
-            &copy; 2025 ClickFunnels Guide. All rights reserved. This site contains affiliate links.
-          </p>
-        </div>
-      </footer>
     </div>
   )
 }

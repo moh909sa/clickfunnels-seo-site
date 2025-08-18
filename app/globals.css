@@ -37,28 +37,55 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
+@layer base {
   html {
-    color-scheme: dark;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-white text-gray-900;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+  }
+  
+  h1 {
+    @apply text-fluid-4xl md:text-fluid-5xl;
+  }
+  
+  h2 {
+    @apply text-fluid-3xl md:text-fluid-4xl;
+  }
+  
+  h3 {
+    @apply text-fluid-2xl md:text-fluid-3xl;
+  }
+  
+  h4 {
+    @apply text-fluid-xl md:text-fluid-2xl;
+  }
+  
+  p {
+    @apply text-fluid-base leading-relaxed;
   }
 }
 
-/* Custom utility classes */
 @layer components {
   .container-custom {
     @apply max-w-container mx-auto px-4 sm:px-6 lg:px-8;
   }
   
   .btn-primary {
-    @apply bg-gradient-to-r from-brand-1 to-brand-2 hover:from-brand-2 hover:to-brand-3 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg;
+    @apply bg-gradient-to-r from-brand-1 via-brand-2 to-brand-3 text-white font-semibold py-3 px-6 rounded-xl hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200;
   }
   
   .btn-secondary {
-    @apply bg-white text-brand-1 border-2 border-brand-1 font-semibold py-3 px-6 rounded-xl hover:bg-brand-1 hover:text-white transition-all duration-300;
+    @apply bg-white text-brand-1 font-semibold py-3 px-6 rounded-xl border-2 border-brand-1 hover:bg-brand-1 hover:text-white transition-all duration-200;
   }
   
   .card {
-    @apply bg-white rounded-2xl shadow-lg border border-gray-100 p-6 hover:shadow-xl transition-shadow duration-300;
+    @apply bg-white rounded-2xl shadow-lg p-6 border border-gray-100;
   }
   
   .gradient-text {
@@ -66,35 +93,17 @@ a {
   }
   
   .gradient-bg {
-    @apply bg-gradient-to-br from-brand-1 via-brand-2 to-brand-3;
+    @apply bg-gradient-to-r from-brand-1 via-brand-2 to-brand-3;
   }
 }
 
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .focus-visible {
+    @apply outline-none ring-2 ring-brand-1 ring-offset-2;
+  }
 }
 
-/* Focus styles for accessibility */
-*:focus {
-  outline: 2px solid hsl(var(--color-primary));
-  outline-offset: 2px;
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-  background: hsl(var(--color-primary));
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--color-primary) / 0.8);
-}

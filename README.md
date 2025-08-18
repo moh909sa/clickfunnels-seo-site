@@ -1,92 +1,129 @@
 # ClickFunnels SEO Site
 
-A comprehensive, SEO-optimized website providing detailed information about ClickFunnels pricing, alternatives, and comparisons. Built with Next.js 14, TailwindCSS, and modern web technologies.
+A comprehensive programmatic SEO website for ClickFunnels affiliate marketing, built with Next.js 14 and TailwindCSS.
 
 ## 🚀 Features
 
-- **SEO Optimized**: Built-in SEO with meta tags, structured data, and sitemap
-- **Responsive Design**: Mobile-first design with TailwindCSS
-- **Performance**: Optimized for Core Web Vitals and Lighthouse scores
-- **Accessibility**: WCAG compliant with proper ARIA labels and keyboard navigation
-- **Modern UI**: Beautiful gradients, glassy headers, and smooth animations
+- **3 Landing Pages**: Pricing, vs Kartra comparison, and alternatives
+- **Modern UI/UX**: Responsive design with gradient backgrounds and smooth animations
+- **SEO Optimized**: Meta tags, Open Graph, Twitter Cards, JSON-LD structured data
+- **Performance Focused**: Optimized for Core Web Vitals and Lighthouse scores
+- **Affiliate Integration**: Direct links to ClickFunnels with affiliate tracking
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 14 (App Router)
+- **Styling**: TailwindCSS with custom design system
+- **Language**: TypeScript
+- **Components**: React with custom component library
+- **Icons**: Lucide React
+- **Analytics**: Vercel Analytics
+- **Deployment**: Vercel (recommended)
 
 ## 📁 Project Structure
 
 ```
 clickfunnels-seo-site/
-├── app/                          # Next.js 14 App Router
-│   ├── globals.css              # Global styles and TailwindCSS
-│   ├── layout.tsx               # Root layout with SEO
-│   ├── page.tsx                 # Homepage
+├── app/                          # Next.js app directory
 │   ├── clickfunnels-pricing/    # Pricing page
 │   ├── clickfunnels-vs-kartra/  # Comparison page
 │   ├── clickfunnels-alternatives/ # Alternatives page
-│   └── sitemap.ts              # Dynamic sitemap
-├── components/                   # Reusable React components
-│   ├── Hero.tsx                # Hero section component
-│   ├── PricingTable.tsx        # Pricing table with toggle
-│   ├── FAQ.tsx                 # FAQ with JSON-LD schema
-│   └── Callout.tsx             # CTA ribbon component
-├── data/                        # Data files
-│   └── pages.json              # Page configuration
+│   ├── globals.css              # Global styles
+│   ├── layout.tsx               # Root layout
+│   ├── page.tsx                 # Homepage
+│   └── sitemap.ts               # Dynamic sitemap
+├── components/                   # Reusable components
+│   ├── Hero.tsx                 # Hero section component
+│   ├── PricingTable.tsx         # Pricing table with toggle
+│   ├── FAQ.tsx                  # FAQ accordion with JSON-LD
+│   └── Callout.tsx              # CTA component
+├── data/                        # Content data
+│   └── pages.json               # Page blueprint data
 ├── public/                      # Static assets
-│   └── robots.txt              # Robots file
+│   └── robots.txt               # Robots file
 ├── tailwind.config.js           # TailwindCSS configuration
-├── package.json                 # Dependencies and scripts
+├── next.config.js               # Next.js configuration
+├── package.json                 # Dependencies
 └── README.md                    # This file
 ```
 
-## 🛠️ Tech Stack
-
-- **Framework**: Next.js 14 (App Router)
-- **Styling**: TailwindCSS with custom design tokens
-- **Icons**: Lucide React
-- **Analytics**: Vercel Analytics
-- **SEO**: Next-SEO
-- **TypeScript**: Full type safety
-- **Deployment**: Vercel (ready)
-
 ## 🎨 Design System
 
-- **Primary Colors**: Purple (#6D28D9), Cyan (#22D3EE), Amber (#F59E0B)
-- **Typography**: Inter font family with fluid typography
+### Colors
+- **Primary**: #6D28D9 (Purple)
+- **Secondary**: #22D3EE (Cyan)
+- **Accent**: #F59E0B (Amber)
+
+### Typography
+- **Heading Font**: Inter (Bold)
+- **Body Font**: Inter (Regular)
+- **Fluid Typography**: Responsive font sizes using CSS clamp
+
+### Components
+- **Cards**: Rounded corners (14px), subtle shadows
+- **Buttons**: Gradient backgrounds, hover animations
 - **Spacing**: 8pt grid system
-- **Border Radius**: 14px (custom CSS variable)
-- **Gradients**: Brand color combinations for visual appeal
+- **Animations**: Fade-in, slide-up, gentle bounce
 
 ## 📱 Pages
 
-1. **Homepage** (`/`) - Overview and navigation hub
-2. **Pricing** (`/clickfunnels-pricing`) - Detailed pricing plans and comparison
-3. **vs Kartra** (`/clickfunnels-vs-kartra`) - Head-to-head comparison
-4. **Alternatives** (`/clickfunnels-alternatives`) - 15+ alternative platforms
+### 1. Homepage (`/`)
+- Hero section with main CTA
+- Features overview
+- Navigation to all pages
+- Footer with quick links
+
+### 2. Pricing Page (`/clickfunnels-pricing`)
+- Detailed pricing plans
+- Monthly/annual toggle
+- Feature comparison table
+- FAQ section
+- Multiple CTAs
+
+### 3. vs Kartra Page (`/clickfunnels-vs-kartra`)
+- Head-to-head comparison
+- Feature-by-feature analysis
+- Pros and cons
+- Decision guide
+- FAQ section
+
+### 4. Alternatives Page (`/clickfunnels-alternatives`)
+- 15+ alternatives overview
+- Pricing comparison
+- Feature matrix
+- Selection guide
+- FAQ section
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-
 - Node.js 18+ 
 - npm or yarn
 
 ### Installation
 
-1. Clone the repository:
-```bash
-git clone <repository-url>
-cd clickfunnels-seo-site
-```
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/clickfunnels-seo-site.git
+   cd clickfunnels-seo-site
+   ```
 
-2. Install dependencies:
-```bash
-npm install
-```
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-3. Run the development server:
-```bash
-npm run dev
-```
+3. **Run development server**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+4. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
 
 ### Build for Production
 
@@ -95,7 +132,7 @@ npm run build
 npm start
 ```
 
-## 🔧 Configuration
+## ⚙️ Configuration
 
 ### Environment Variables
 
@@ -107,84 +144,115 @@ NEXT_PUBLIC_AFFILIATE_URL=https://www.clickfunnels.com/signup-flow?aff=YOUR_AFFI
 
 ### Customization
 
-- **Brand Colors**: Update `tailwind.config.js` brand palette
-- **Content**: Modify `data/pages.json` for page structure
+- **Brand Colors**: Update `tailwind.config.js` colors
+- **Content**: Modify `data/pages.json` for page content
 - **SEO**: Update metadata in each page component
 - **Styling**: Customize `app/globals.css` for global styles
 
-## 📊 SEO Features
+## 🔍 SEO Features
 
-- **Meta Tags**: Comprehensive Open Graph and Twitter Card support
-- **Structured Data**: JSON-LD schema for FAQ pages
+- **Meta Tags**: Title, description, keywords for each page
+- **Open Graph**: Social media sharing optimization
+- **Twitter Cards**: Twitter-specific meta tags
+- **JSON-LD**: Structured data for FAQs and pricing
 - **Sitemap**: Dynamic XML sitemap generation
 - **Robots.txt**: Search engine crawling instructions
-- **Canonical URLs**: Proper URL canonicalization
-- **Performance**: Optimized for Core Web Vitals
+- **Canonical URLs**: Prevent duplicate content issues
 
-## 🎯 Performance Targets
+## 📊 Performance
 
-- **Lighthouse Performance**: ≥ 90
-- **Lighthouse SEO**: ≥ 95  
-- **Lighthouse Accessibility**: ≥ 95
-- **Core Web Vitals**: All metrics in green
+### Lighthouse Targets
+- **Performance**: ≥ 90
+- **SEO**: ≥ 95
+- **Accessibility**: ≥ 95
+- **Best Practices**: ≥ 90
+
+### Core Web Vitals
+- **LCP**: < 2.5s
+- **FID**: < 100ms
+- **CLS**: < 0.1
 
 ## 📈 Analytics
 
-- **Vercel Analytics**: Built-in performance monitoring
-- **Conversion Tracking**: Affiliate link tracking ready
-- **Performance Monitoring**: Real-time performance metrics
+The site includes Vercel Analytics for:
+- Page views and user behavior
+- Performance monitoring
+- Conversion tracking
+- A/B testing insights
 
 ## 🚀 Deployment
 
 ### Vercel (Recommended)
 
-1. Push to GitHub
-2. Connect repository to Vercel
-3. Deploy automatically
+1. **Connect your GitHub repository**
+2. **Import project to Vercel**
+3. **Set environment variables**
+4. **Deploy automatically**
 
 ### Other Platforms
 
-- **Netlify**: Compatible with Next.js static export
-- **AWS Amplify**: Full Next.js support
-- **Docker**: Containerized deployment ready
+- **Netlify**: Compatible with Next.js
+- **AWS Amplify**: Full-stack deployment
+- **Self-hosted**: Docker or traditional hosting
 
-## 🔍 Content Strategy
+## 📝 Content Strategy
 
-- **Keyword Research**: 20+ commercial keywords identified
-- **Content Clusters**: Pricing, alternatives, comparisons, use cases
-- **Internal Linking**: Strategic page connections
-- **CTAs**: Multiple conversion opportunities per page
+### Target Keywords
+- Primary: "clickfunnels pricing", "clickfunnels alternatives"
+- Secondary: "clickfunnels vs kartra", "sales funnel builder"
+- Long-tail: "clickfunnels pricing 2025", "best clickfunnels alternative"
 
-## 📝 Content Guidelines
+### Content Types
+- **Comparison Pages**: Detailed feature analysis
+- **Pricing Pages**: Transparent cost breakdown
+- **Alternative Pages**: Comprehensive platform reviews
+- **FAQ Sections**: User question optimization
 
-- **Word Count**: 2,000-3,000 words per page
-- **CTAs**: 2-3 affiliate links per page
-- **Images**: Optimized with proper alt text
-- **Links**: Internal and external with proper attributes
+## 🛠️ Development
+
+### Scripts
+
+```json
+{
+  "dev": "next dev",           # Development server
+  "build": "next build",       # Production build
+  "start": "next start",       # Production server
+  "lint": "next lint",         # ESLint checking
+  "generate-pages": "tsx scripts/generate-pages.ts"  # Page generation
+}
+```
+
+### Code Style
+
+- **TypeScript**: Strict mode enabled
+- **ESLint**: Next.js recommended rules
+- **Prettier**: Consistent formatting
+- **Components**: Functional components with hooks
 
 ## 🤝 Contributing
 
 1. Fork the repository
 2. Create a feature branch
 3. Make your changes
-4. Test thoroughly
+4. Add tests if applicable
 5. Submit a pull request
 
 ## 📄 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## ⚠️ Disclaimer
+## 🆘 Support
 
-This site contains affiliate links to ClickFunnels. We may earn a commission when you purchase through these links at no additional cost to you.
+- **Issues**: GitHub Issues
+- **Documentation**: This README
+- **Community**: GitHub Discussions
 
-## 📞 Support
+## 🔗 Links
 
-For questions or support:
-- Create an issue in the repository
-- Check the documentation
-- Review the FAQ sections
+- **Live Site**: [https://clickfunnels-seo-site.vercel.app](https://clickfunnels-seo-site.vercel.app)
+- **ClickFunnels**: [https://www.clickfunnels.com](https://www.clickfunnels.com)
+- **Repository**: [https://github.com/yourusername/clickfunnels-seo-site](https://github.com/yourusername/clickfunnels-seo-site)
 
 ---
 
-Built with ❤️ using Next.js 14 and modern web technologies.
+**Note**: This site contains affiliate links to ClickFunnels. We may earn a commission if you sign up through our links.

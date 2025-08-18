@@ -3,15 +3,21 @@ import Hero from '@/components/Hero'
 import PricingTable from '@/components/PricingTable'
 import FAQ from '@/components/FAQ'
 import Callout from '@/components/Callout'
-import { CheckCircle, Star, TrendingUp, Zap, Users, Shield } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'ClickFunnels Pricing 2025: Complete Plans & Cost Breakdown',
-  description: 'Discover ClickFunnels pricing plans for 2025. Compare Launch ($81), Scale ($164), Optimize ($248), and Dominate plans. Includes free trial and money-back guarantee.',
-  keywords: ['clickfunnels pricing', 'clickfunnels cost', 'clickfunnels plans', 'clickfunnels pricing 2025', 'clickfunnels monthly cost'],
+  description: 'Get ClickFunnels pricing details for 2025. Compare Launch, Scale, Optimize & Dominate plans. Includes free trial, features, and money-back guarantee.',
+  keywords: [
+    'clickfunnels pricing',
+    'clickfunnels cost',
+    'clickfunnels plans 2025',
+    'clickfunnels pricing plans',
+    'clickfunnels monthly cost',
+    'clickfunnels annual pricing'
+  ],
   openGraph: {
     title: 'ClickFunnels Pricing 2025: Complete Plans & Cost Breakdown',
-    description: 'Discover ClickFunnels pricing plans for 2025. Compare Launch ($81), Scale ($164), Optimize ($248), and Dominate plans.',
+    description: 'Get ClickFunnels pricing details for 2025. Compare Launch, Scale, Optimize & Dominate plans. Includes free trial, features, and money-back guarantee.',
     url: 'https://clickfunnels-seo-site.vercel.app/clickfunnels-pricing',
   },
 }
@@ -19,218 +25,133 @@ export const metadata: Metadata = {
 const faqItems = [
   {
     question: "How much does ClickFunnels cost per month?",
-    answer: "ClickFunnels offers four main pricing tiers: Launch at $81/month (annual billing), Scale at $164/month, Optimize at $248/month, and Dominate at $5,997/year. Monthly billing costs more: Launch ($97), Scale ($197), and Optimize ($297)."
-  },
-  {
-    question: "What's the difference between ClickFunnels plans?",
-    answer: "The main differences are in workspace limits, team members, contacts, email limits, courses, and advanced features. Launch is for startups, Scale adds more workspaces and features, Optimize includes affiliate management, and Dominate is for enterprise users with VIP support."
-  },
-  {
-    question: "Can I cancel ClickFunnels anytime?",
-    answer: "Yes, you can cancel ClickFunnels at any time. There are no long-term contracts, and you can cancel through your account settings. However, be aware that you'll lose access to your funnels and data immediately upon cancellation."
-  },
-  {
-    question: "Does ClickFunnels offer a free trial?",
-    answer: "Yes, ClickFunnels offers a 14-day free trial for all plans. You can test all features without providing credit card information. After the trial, you'll need to choose a plan to continue using the platform."
+    answer: "ClickFunnels pricing starts at $81/month for the Launch plan (billed annually) or $97/month (billed monthly). The Scale plan costs $164/month annually or $197/month monthly, while the Optimize plan is $248/month annually or $297/month monthly. The Dominate plan is $5,997/year (annual only)."
   },
   {
     question: "Which ClickFunnels plan is best for beginners?",
-    answer: "The Launch plan ($81/month) is ideal for beginners and small businesses. It includes unlimited funnels, 1 workspace, 2 team members, and essential features to get started. You can always upgrade as your business grows."
+    answer: "The Launch plan ($81/month) is ideal for beginners and startups. It includes unlimited funnels, 1 workspace, 2 team members, 10K contacts, 50K emails/month, 3 courses, and 5 custom domains. This plan provides all the essential features to get started with sales funnels."
   },
   {
-    question: "Are there any hidden fees with ClickFunnels?",
-    answer: "No, ClickFunnels pricing is transparent with no hidden fees. The monthly/annual subscription covers all features within your plan. However, you may incur additional costs for third-party integrations, custom domains, or advanced features not included in your plan."
+    question: "Can I cancel my ClickFunnels subscription?",
+    answer: "Yes, you can cancel your ClickFunnels subscription at any time. There are no long-term contracts, and you can cancel through your account settings. Your access will continue until the end of your current billing period."
+  },
+  {
+    question: "Does ClickFunnels offer a free trial?",
+    answer: "Yes, ClickFunnels offers a 14-day free trial for all plans. You can test all features without providing credit card information. After the trial, you can choose to continue with a paid plan or cancel without any charges."
+  },
+  {
+    question: "What's the difference between monthly and annual billing?",
+    answer: "Annual billing offers significant savings - approximately 17% off compared to monthly billing. For example, the Launch plan costs $81/month annually vs $97/month monthly, saving you $194 per year. All plans include the same features regardless of billing cycle."
+  },
+  {
+    question: "Which plan includes unlimited funnels?",
+    answer: "All ClickFunnels plans include unlimited funnels, unlimited pages, and unlimited visitors. The main differences between plans are in the number of workspaces, team members, contacts, emails, courses, and advanced features like custom code editor and API access."
+  },
+  {
+    question: "Do ClickFunnels plans include email marketing?",
+    answer: "ClickFunnels includes basic email marketing capabilities for broadcasts, but for advanced email automation and sequences, you'll need to integrate with third-party email marketing services like ActiveCampaign, Mailchimp, or ConvertKit."
+  },
+  {
+    question: "Can I upgrade or downgrade my plan?",
+    answer: "Yes, you can upgrade or downgrade your ClickFunnels plan at any time. Upgrades take effect immediately, while downgrades take effect at the end of your current billing cycle. You can manage plan changes through your account dashboard."
   }
 ]
 
 export default function ClickFunnelsPricingPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Header */}
-      <header className="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50">
-        <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-brand-1 to-brand-2 rounded-lg"></div>
-              <a href="/" className="text-xl font-bold text-gray-900">ClickFunnels Guide</a>
-            </div>
-            <nav className="hidden md:flex items-center space-x-8">
-              <a href="/" className="text-gray-600 hover:text-brand-1 transition-colors">Home</a>
-              <a href="/clickfunnels-vs-kartra" className="text-gray-600 hover:text-brand-1 transition-colors">vs Kartra</a>
-              <a href="/clickfunnels-alternatives" className="text-gray-600 hover:text-brand-1 transition-colors">Alternatives</a>
-            </nav>
-          </div>
-        </div>
-      </header>
-
-      {/* Hero Section */}
+    <div className="min-h-screen">
       <Hero
         headline="ClickFunnels Pricing 2025: Complete Plans & Cost Breakdown"
-        subtext="Discover the perfect ClickFunnels plan for your business. Compare Launch ($81), Scale ($164), Optimize ($248), and Dominate plans with detailed feature breakdowns and pricing analysis."
+        subtext="Discover ClickFunnels pricing plans from Launch to Dominate. Get detailed breakdowns of features, costs, and find the perfect plan for your business size and needs."
         ctaText="Start Free Trial"
+        ctaHref="https://www.clickfunnels.com/signup-flow?aff=36738480f0374bbe21a0d263c8b707ef738b7c7b7eb67bda8f16f741f9edca5a"
+        secondaryCtaText="View All Plans"
+        secondaryCtaHref="#pricing"
       />
 
-      {/* Key Benefits */}
-      <section className="py-20 bg-white">
-        <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-fluid-3xl font-bold text-gray-900 mb-4">
-              Why Choose ClickFunnels?
-            </h2>
-            <p className="text-fluid-lg text-gray-600 max-w-2xl mx-auto">
-              ClickFunnels has helped over 150,000 entrepreneurs build high-converting sales funnels and grow their businesses.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-brand-1 to-brand-2 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <TrendingUp className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Unlimited Funnels</h3>
-              <p className="text-gray-600">
-                Create as many sales funnels as you need without worrying about limits or restrictions.
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-brand-2 to-brand-3 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Zap className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Drag & Drop Builder</h3>
-              <p className="text-gray-600">
-                No coding required. Build professional funnels with our intuitive drag-and-drop interface.
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-brand-3 to-brand-1 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Users className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Team Collaboration</h3>
-              <p className="text-gray-600">
-                Work together with your team members on funnels, courses, and marketing campaigns.
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <CheckCircle className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Proven Templates</h3>
-              <p className="text-gray-600">
-                Access hundreds of pre-built funnel templates that have been proven to convert.
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Shield className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Secure & Reliable</h3>
-              <p className="text-gray-600">
-                Enterprise-grade security and 99.9% uptime guarantee for your business-critical funnels.
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Star className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Award-Winning Support</h3>
-              <p className="text-gray-600">
-                Get help when you need it with our award-winning customer support team.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Pricing Table */}
-      <PricingTable />
+      <div id="pricing">
+        <PricingTable />
+      </div>
 
-      {/* Plan Comparison */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-fluid-3xl font-bold text-gray-900 mb-4">
-              Detailed Plan Comparison
-            </h2>
-            <p className="text-fluid-lg text-gray-600 max-w-2xl mx-auto">
-              See exactly what's included in each plan to make the best choice for your business.
-            </p>
-          </div>
-
+      {/* Detailed Plan Comparison */}
+      <section className="py-16 px-4 bg-white">
+        <div className="container-custom">
+          <h2 className="text-center mb-12">Detailed Plan Comparison</h2>
           <div className="overflow-x-auto">
-            <table className="w-full bg-white rounded-2xl shadow-lg border border-gray-100">
+            <table className="w-full border-collapse border border-gray-200 rounded-lg overflow-hidden">
               <thead>
-                <tr className="border-b border-gray-200">
-                  <th className="text-left p-6 font-semibold text-gray-900">Feature</th>
-                  <th className="text-center p-6 font-semibold text-gray-900">Launch</th>
-                  <th className="text-center p-6 font-semibold text-gray-900 bg-brand-1/5">Scale</th>
-                  <th className="text-center p-6 font-semibold text-gray-900">Optimize</th>
+                <tr className="bg-gray-50">
+                  <th className="border border-gray-200 p-4 text-left font-semibold">Feature</th>
+                  <th className="border border-gray-200 p-4 text-center font-semibold">Launch</th>
+                  <th className="border border-gray-200 p-4 text-center font-semibold">Scale</th>
+                  <th className="border border-gray-200 p-4 text-center font-semibold">Optimize</th>
+                  <th className="border border-gray-200 p-4 text-center font-semibold">Dominate</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-gray-200">
+              <tbody>
                 <tr>
-                  <td className="p-6 font-medium text-gray-900">Monthly Price</td>
-                  <td className="p-6 text-center text-2xl font-bold text-gray-900">$97</td>
-                  <td className="p-6 text-center text-2xl font-bold text-brand-1 bg-brand-1/5">$197</td>
-                  <td className="p-6 text-center text-2xl font-bold text-gray-900">$297</td>
+                  <td className="border border-gray-200 p-4 font-medium">Monthly Price (Annual)</td>
+                  <td className="border border-gray-200 p-4 text-center">$81</td>
+                  <td className="border border-gray-200 p-4 text-center">$164</td>
+                  <td className="border border-gray-200 p-4 text-center">$248</td>
+                  <td className="border border-gray-200 p-4 text-center">$500</td>
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="border border-gray-200 p-4 font-medium">Workspaces</td>
+                  <td className="border border-gray-200 p-4 text-center">1</td>
+                  <td className="border border-gray-200 p-4 text-center">5</td>
+                  <td className="border border-gray-200 p-4 text-center">10</td>
+                  <td className="border border-gray-200 p-4 text-center">20</td>
                 </tr>
                 <tr>
-                  <td className="p-6 font-medium text-gray-900">Annual Price</td>
-                  <td className="p-6 text-center text-gray-600">$81/mo</td>
-                  <td className="p-6 text-center text-gray-600 bg-brand-1/5">$164/mo</td>
-                  <td className="p-6 text-center text-gray-600">$248/mo</td>
+                  <td className="border border-gray-200 p-4 font-medium">Team Members</td>
+                  <td className="border border-gray-200 p-4 text-center">2</td>
+                  <td className="border border-gray-200 p-4 text-center">5</td>
+                  <td className="border border-gray-200 p-4 text-center">10</td>
+                  <td className="border border-gray-200 p-4 text-center">20</td>
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="border border-gray-200 p-4 font-medium">Contacts</td>
+                  <td className="border border-gray-200 p-4 text-center">10K</td>
+                  <td className="border border-gray-200 p-4 text-center">75K</td>
+                  <td className="border border-gray-200 p-4 text-center">150K</td>
+                  <td className="border border-gray-200 p-4 text-center">400K</td>
                 </tr>
                 <tr>
-                  <td className="p-6 font-medium text-gray-900">Workspaces</td>
-                  <td className="p-6 text-center text-gray-600">1</td>
-                  <td className="p-6 text-center text-gray-600 bg-brand-1/5">5</td>
-                  <td className="p-6 text-center text-gray-600">10</td>
+                  <td className="border border-gray-200 p-4 font-medium">Emails/Month</td>
+                  <td className="border border-gray-200 p-4 text-center">50K</td>
+                  <td className="border border-gray-200 p-4 text-center">300K</td>
+                  <td className="border border-gray-200 p-4 text-center">750K</td>
+                  <td className="border border-gray-200 p-4 text-center">1.2M</td>
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="border border-gray-200 p-4 font-medium">Courses</td>
+                  <td className="border border-gray-200 p-4 text-center">3</td>
+                  <td className="border border-gray-200 p-4 text-center">6</td>
+                  <td className="border border-gray-200 p-4 text-center">10</td>
+                  <td className="border border-gray-200 p-4 text-center">20</td>
                 </tr>
                 <tr>
-                  <td className="p-6 font-medium text-gray-900">Team Members</td>
-                  <td className="p-6 text-center text-gray-600">2</td>
-                  <td className="p-6 text-center text-gray-600 bg-brand-1/5">5</td>
-                  <td className="p-6 text-center text-gray-600">10</td>
+                  <td className="border border-gray-200 p-4 font-medium">Custom Domains</td>
+                  <td className="border border-gray-200 p-4 text-center">5</td>
+                  <td className="border border-gray-200 p-4 text-center">Unlimited</td>
+                  <td className="border border-gray-200 p-4 text-center">Unlimited</td>
+                  <td className="border border-gray-200 p-4 text-center">Unlimited</td>
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="border border-gray-200 p-4 font-medium">AI Tools</td>
+                  <td className="border border-gray-200 p-4 text-center">1M Words</td>
+                  <td className="border border-gray-200 p-4 text-center">2M Words</td>
+                  <td className="border border-gray-200 p-4 text-center">5M Words</td>
+                  <td className="border border-gray-200 p-4 text-center">10M Words</td>
                 </tr>
                 <tr>
-                  <td className="p-6 font-medium text-gray-900">Contacts</td>
-                  <td className="p-6 text-center text-gray-600">10,000</td>
-                  <td className="p-6 text-center text-gray-600 bg-brand-1/5">75,000</td>
-                  <td className="p-6 text-center text-gray-600">150,000</td>
-                </tr>
-                <tr>
-                  <td className="p-6 font-medium text-gray-900">Email Limit</td>
-                  <td className="p-6 text-center text-gray-600">50K/month</td>
-                  <td className="p-6 text-center text-gray-600 bg-brand-1/5">300K/month</td>
-                  <td className="p-6 text-center text-gray-600">750K/month</td>
-                </tr>
-                <tr>
-                  <td className="p-6 font-medium text-gray-900">Courses</td>
-                  <td className="p-6 text-center text-gray-600">3</td>
-                  <td className="p-6 text-center text-gray-600 bg-brand-1/5">6</td>
-                  <td className="p-6 text-center text-gray-600">10</td>
-                </tr>
-                <tr>
-                  <td className="p-6 font-medium text-gray-900">Custom Domains</td>
-                  <td className="p-6 text-center text-gray-600">5</td>
-                  <td className="p-6 text-center text-gray-600 bg-brand-1/5">Unlimited</td>
-                  <td className="p-6 text-center text-gray-600">Unlimited</td>
-                </tr>
-                <tr>
-                  <td className="p-6 font-medium text-gray-900">Appointments</td>
-                  <td className="p-6 text-center text-gray-400">❌</td>
-                  <td className="p-6 text-center text-green-500 bg-brand-1/5">✅</td>
-                  <td className="p-6 text-center text-green-500">✅</td>
-                </tr>
-                <tr>
-                  <td className="p-6 font-medium text-gray-900">Affiliate Center</td>
-                  <td className="p-6 text-center text-gray-400">❌</td>
-                  <td className="p-6 text-center text-gray-400 bg-brand-1/5">❌</td>
-                  <td className="p-6 text-center text-green-500">✅</td>
+                  <td className="border border-gray-200 p-4 font-medium">Support</td>
+                  <td className="border border-gray-200 p-4 text-center">Standard</td>
+                  <td className="border border-gray-200 p-4 text-center">Priority + Chat</td>
+                  <td className="border border-gray-200 p-4 text-center">Priority + Chat</td>
+                  <td className="border border-gray-200 p-4 text-center">VIP</td>
                 </tr>
               </tbody>
             </table>
@@ -242,24 +163,16 @@ export default function ClickFunnelsPricingPage() {
       <FAQ 
         items={faqItems}
         title="ClickFunnels Pricing FAQ"
-        subtitle="Get answers to the most common questions about ClickFunnels pricing and plans."
+        subtitle="Common questions about ClickFunnels pricing and plans"
       />
 
       {/* Final CTA */}
       <Callout
         title="Ready to Start Building High-Converting Funnels?"
-        subtitle="Join thousands of entrepreneurs who are already using ClickFunnels to grow their businesses. Start your free trial today!"
-        ctaText="Start Your Free Trial"
+        subtitle="Join thousands of entrepreneurs who have built successful businesses with ClickFunnels. Start your 14-day free trial today."
+        ctaText="Start Free Trial"
+        ctaHref="https://www.clickfunnels.com/signup-flow?aff=36738480f0374bbe21a0d263c8b707ef738b7c7b7eb67bda8f16f741f9edca5a"
       />
-
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
-        <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-gray-400 text-sm">
-            &copy; 2025 ClickFunnels Guide. All rights reserved. This site contains affiliate links.
-          </p>
-        </div>
-      </footer>
     </div>
   )
 }

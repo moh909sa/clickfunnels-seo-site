@@ -4,7 +4,7 @@ const nextConfig = {
     appDir: true,
   },
   images: {
-    domains: ['statics.myclickfunnels.com', 'cdn.prod.website-files.com'],
+    domains: ['clickfunnels.com', 'statics.myclickfunnels.com'],
   },
 }
 
