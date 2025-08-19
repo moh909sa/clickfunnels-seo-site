@@ -1,69 +1,135 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    './src/**/*.{astro,ts,tsx,mdx}',
-    './src/components/**/*.{astro,ts,tsx}',
-    './src/layouts/**/*.{astro,ts,tsx}',
-    './src/pages/**/*.{astro,ts,tsx,mdx}',
-  ],
+export default {
+  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
       colors: {
         primary: {
-          DEFAULT: 'hsl(var(--color-primary))',
-          foreground: 'hsl(var(--color-primary-foreground))',
+          50: '#eef2ff',
+          100: '#e0e7ff',
+          200: '#c7d2fe',
+          300: '#a5b4fc',
+          400: '#818cf8',
+          500: '#6366f1',
+          600: '#4f46e5',
+          700: '#4338ca',
+          800: '#3730a3',
+          900: '#312e81',
+          950: '#1e1b4b',
         },
-        brand: {
-          1: '#6D28D9', // Primary purple
-          2: '#22D3EE', // Cyan
-          3: '#F59E0B', // Amber
+        secondary: {
+          50: '#fdf2f8',
+          100: '#fce7f3',
+          200: '#fbcfe8',
+          300: '#f9a8d4',
+          400: '#f472b6',
+          500: '#ec4899',
+          600: '#db2777',
+          700: '#be185d',
+          800: '#9d174d',
+          900: '#831843',
+          950: '#500724',
+        },
+        accent: {
+          50: '#f0fdf4',
+          100: '#dcfce7',
+          200: '#bbf7d0',
+          300: '#86efac',
+          400: '#4ade80',
+          500: '#22c55e',
+          600: '#16a34a',
+          700: '#15803d',
+          800: '#166534',
+          900: '#14532d',
+          950: '#052e16',
+        },
+        neutral: {
+          50: '#f8fafc',
+          100: '#f1f5f9',
+          200: '#e2e8f0',
+          300: '#cbd5e1',
+          400: '#94a3b8',
+          500: '#64748b',
+          600: '#475569',
+          700: '#334155',
+          800: '#1e293b',
+          900: '#0f172a',
+          950: '#020617',
         }
       },
-      borderRadius: {
-        DEFAULT: 'var(--radius)',
+      fontFamily: {
+        sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        display: ['Cal Sans', 'Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+      },
+      fontSize: {
+        'xs': ['0.75rem', { lineHeight: '1rem' }],
+        'sm': ['0.875rem', { lineHeight: '1.25rem' }],
+        'base': ['1rem', { lineHeight: '1.5rem' }],
+        'lg': ['1.125rem', { lineHeight: '1.75rem' }],
+        'xl': ['1.25rem', { lineHeight: '1.75rem' }],
+        '2xl': ['1.5rem', { lineHeight: '2rem' }],
+        '3xl': ['1.875rem', { lineHeight: '2.25rem' }],
+        '4xl': ['2.25rem', { lineHeight: '2.5rem' }],
+        '5xl': ['3rem', { lineHeight: '1' }],
+        '6xl': ['3.75rem', { lineHeight: '1' }],
+        '7xl': ['4.5rem', { lineHeight: '1' }],
+        '8xl': ['6rem', { lineHeight: '1' }],
+        '9xl': ['8rem', { lineHeight: '1' }],
       },
       spacing: {
         '18': '4.5rem',
         '88': '22rem',
         '128': '32rem',
       },
-      fontSize: {
-        'fluid-xs': 'clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem)',
-        'fluid-sm': 'clamp(0.875rem, 0.8rem + 0.375vw, 1rem)',
-        'fluid-base': 'clamp(1rem, 0.9rem + 0.5vw, 1.125rem)',
-        'fluid-lg': 'clamp(1.125rem, 1rem + 0.625vw, 1.25rem)',
-        'fluid-xl': 'clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem)',
-        'fluid-2xl': 'clamp(1.5rem, 1.3rem + 1vw, 2rem)',
-        'fluid-3xl': 'clamp(2rem, 1.7rem + 1.5vw, 2.5rem)',
-        'fluid-4xl': 'clamp(2.5rem, 2.1rem + 2vw, 3.5rem)',
-        'fluid-5xl': 'clamp(3.5rem, 2.9rem + 3vw, 4.5rem)',
+      borderRadius: {
+        '4xl': '2rem',
+        '5xl': '2.5rem',
       },
-      maxWidth: {
-        'container': '1200px',
+      boxShadow: {
+        'soft': '0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04)',
+        'medium': '0 4px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+        'large': '0 10px 40px -10px rgba(0, 0, 0, 0.15), 0 2px 10px -2px rgba(0, 0, 0, 0.05)',
+        'glow': '0 0 20px rgba(99, 102, 241, 0.3)',
+        'glow-lg': '0 0 40px rgba(99, 102, 241, 0.4)',
+      },
+      animation: {
+        'float': 'float 6s ease-in-out infinite',
+        'slide-up': 'slide-up 0.6s ease-out',
+        'fade-in': 'fade-in 0.8s ease-out',
+        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'bounce-slow': 'bounce 3s infinite',
+        'spin-slow': 'spin 8s linear infinite',
+      },
+      keyframes: {
+        float: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-20px)' },
+        },
+        'slide-up': {
+          '0%': { transform: 'translateY(30px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        'fade-in': {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'gradient-brand': 'linear-gradient(135deg, from-[#6D28D9] via-[#22D3EE] to-[#F59E0B])',
+        'gradient-primary': 'linear-gradient(135deg, #4f46e5 0%, #ec4899 100%)',
+        'gradient-secondary': 'linear-gradient(135deg, #22c55e 0%, #3b82f6 100%)',
+        'gradient-dark': 'linear-gradient(135deg, #0f172a 0%, #334155 100%)',
       },
-      animation: {
-        'fade-in': 'fadeIn 0.5s ease-in-out',
-        'slide-up': 'slideUp 0.5s ease-out',
-        'bounce-gentle': 'bounceGentle 2s infinite',
+      backdropBlur: {
+        xs: '2px',
       },
-      keyframes: {
-        fadeIn: {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' }
-        },
-        slideUp: {
-          '0%': { transform: 'translateY(20px)', opacity: '0' },
-          '100%': { transform: 'translateY(0)', opacity: '1' }
-        },
-        bounceGentle: {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-10px)' }
-        }
+      zIndex: {
+        '60': '60',
+        '70': '70',
+        '80': '80',
+        '90': '90',
+        '100': '100',
       }
     },
   },

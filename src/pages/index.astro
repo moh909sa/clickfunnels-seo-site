@@ -1,0 +1,177 @@
+---
+import Layout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import Features from '../components/Features.astro';
+import Testimonials from '../components/Testimonials.astro';
+import Pricing from '../components/Pricing.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout 
+  title="ClickFunnels - #1 Sales Funnel Platform for Entrepreneurs"
+  description="Create stunning sales funnels in minutes with our drag-and-drop builder. No coding required. Start your free trial today and transform your business."
+  slug=""
+>
+  <!-- Hero Section -->
+  <Hero 
+    title="Build High-Converting Sales Funnels"
+    subtitle="Create stunning sales funnels in minutes with our drag-and-drop builder. No coding required. Start your free trial today and transform your business."
+  />
+
+  <!-- Features Section -->
+  <Features />
+
+  <!-- Social Proof Section -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+          Trusted by Industry Leaders
+        </h2>
+        <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+          Join thousands of successful entrepreneurs who have scaled their businesses with ClickFunnels
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center opacity-60">
+        <div class="flex justify-center">
+          <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=100&fit=crop" alt="Company Logo" class="h-12 opacity-50 grayscale" />
+        </div>
+        <div class="flex justify-center">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&h=100&fit=crop" alt="Company Logo" class="h-12 opacity-50 grayscale" />
+        </div>
+        <div class="flex justify-center">
+          <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=100&fit=crop" alt="Company Logo" class="h-12 opacity-50 grayscale" />
+        </div>
+        <div class="flex justify-center">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&h=100&fit=crop" alt="Company Logo" class="h-12 opacity-50 grayscale" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-20">
+        <div class="inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold bg-blue-100 text-blue-800 mb-6">
+          <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+          </svg>
+          Simple 3-Step Process
+        </div>
+        
+        <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
+          Get Started in
+          <span class="text-gradient">3 Simple Steps</span>
+        </h2>
+        
+        <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+          Building high-converting sales funnels has never been easier. Follow these three simple steps 
+          and start generating more leads and sales today.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-12">
+        <div class="text-center">
+          <div class="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+            <span class="text-3xl font-bold text-white">1</span>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-4">Choose a Template</h3>
+          <p class="text-slate-600 leading-relaxed">
+            Start with one of our professionally designed templates or create from scratch. 
+            We have templates for every industry and use case.
+          </p>
+        </div>
+        
+        <div class="text-center">
+          <div class="w-20 h-20 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+            <span class="text-3xl font-bold text-white">2</span>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-4">Customize & Build</h3>
+          <p class="text-slate-600 leading-relaxed">
+            Use our drag-and-drop builder to customize your funnel. Add pages, forms, 
+            payment gateways, and more with just a few clicks.
+          </p>
+        </div>
+        
+        <div class="text-center">
+          <div class="w-20 h-20 bg-gradient-to-r from-indigo-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+            <span class="text-3xl font-bold text-white">3</span>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-4">Launch & Convert</h3>
+          <p class="text-slate-600 leading-relaxed">
+            Publish your funnel and start converting visitors into customers. 
+            Track performance and optimize for better results.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <Testimonials />
+
+  <!-- Pricing Section -->
+  <Pricing />
+
+  <!-- Final CTA Section -->
+  <section class="py-24 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 relative overflow-hidden">
+    <div class="absolute inset-0">
+      <div class="absolute top-0 left-0 w-full h-full opacity-10">
+        <div class="w-full h-full" style="background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.05) 1px, transparent 0); background-size: 80px 80px;"></div>
+      </div>
+      <div class="absolute top-20 right-20 w-96 h-96 bg-gradient-to-br from-blue-500/10 to-purple-600/10 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-br from-pink-500/10 to-rose-500/10 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+        Ready to Transform
+        <span class="text-gradient">Your Business?</span>
+      </h2>
+      
+      <p class="text-xl text-slate-300 mb-10 leading-relaxed">
+        Join over 100,000 entrepreneurs who have already scaled their businesses with ClickFunnels. 
+        Start your free trial today and see the difference for yourself.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row gap-6 justify-center">
+        <a href="https://www.clickfunnels.com/signup-flow?aff=36738480f0374bbe21a0d263c8b707ef738b7c7b7eb67bda8f16f741f9edca5a" 
+           target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center px-10 py-5 text-xl font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl shadow-2xl hover:shadow-blue-500/25 transform hover:-translate-y-1 transition-all duration-300">
+          Start Free Trial
+          <svg class="ml-3 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+          </svg>
+        </a>
+        
+        <a href="#features" 
+           class="inline-flex items-center px-10 py-5 text-xl font-semibold text-white border-2 border-white/30 rounded-2xl hover:bg-white/10 hover:border-white/50 transition-all duration-300">
+          Learn More
+          <svg class="ml-3 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+          </svg>
+        </a>
+      </div>
+      
+      <div class="mt-12 text-center">
+        <p class="text-slate-400 text-sm">
+          No credit card required • 14-day free trial • Cancel anytime
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <Footer />
+</Layout>
+
+<style>
+  .text-gradient {
+    background: linear-gradient(135deg, #60a5fa 0%, #a855f7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+</style>
